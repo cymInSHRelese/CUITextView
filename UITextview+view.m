@@ -52,7 +52,6 @@
     
     // _placeholderLabel
     self.placeHolderLabel = [[UILabel alloc] init];
-    self.placeHolderLabel.text = @"请填写10字以上的问题描述，以便我们更好地帮助您解决问题";
     self.placeHolderLabel.numberOfLines = 0;
     self.placeHolderLabel.textColor = [UIColor lightGrayColor];
     [self.placeHolderLabel sizeToFit];
@@ -86,7 +85,7 @@
 
 #pragma mark - set
 -(void)setStrPlaceHolder:(NSString *)strPlaceHolder{
-    self.placeHolderLabel.text = @"请填写10字以上的问题描述，以便我们更好地帮助您解决问题";
+    self.placeHolderLabel.text = [NSString stringWithFormat:@"%@",strPlaceHolder];
 }
 -(void)setStrTitle:(NSString *)strTitle{
     self.labRemark.text = [NSString stringWithFormat:@"%@",strTitle];
