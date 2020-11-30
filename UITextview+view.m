@@ -86,6 +86,7 @@
 #pragma mark - set
 -(void)setStrPlaceHolder:(NSString *)strPlaceHolder{
     self.placeHolderLabel.text = [NSString stringWithFormat:@"%@",strPlaceHolder];
+    [self updateFrameDate];
 }
 -(void)setStrTitle:(NSString *)strTitle{
     self.labRemark.text = [NSString stringWithFormat:@"%@",strTitle];
