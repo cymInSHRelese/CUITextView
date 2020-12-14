@@ -111,23 +111,17 @@
 
                 if (textView.text.length>200) {
                     self.tvRemark.text = [textView.text substringToIndex:200];
-                }else{
-                    self.tvRemark.text = textView.text;
                 }
-                self.labNumber.text = [NSString stringWithFormat:@"%lu/200",(unsigned long)textView.text.length];
-
-            }else{
             }
         }else{
 
             if (textView.text.length>200) {
                 self.tvRemark.text = [textView.text substringToIndex:200];
-            }else{
-                self.tvRemark.text = textView.text;
             }
-            self.labNumber.text = [NSString stringWithFormat:@"%lu/200",(unsigned long)textView.text.length];
         }
-    
+            
+    self.labNumber.text = [NSString stringWithFormat:@"%lu/200",(unsigned long)self.tvRemark.text.length];
+            
     if (_delegate && [_delegate respondsToSelector:@selector(CtextViewTextChange:)]) {
          [self.delegate CtextViewTextChange:self.tvRemark.text];
     }
